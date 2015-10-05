@@ -52,4 +52,4 @@ $(:Path to Rigid executable ->)"$PROJECT_DIR/$PROJECT/Rigid" $(:Path to Xcode pr
 ```
    - Build your target
    - Navigate to your project in Finder and locate `Rigid.swift` and add it to your project
-   - Now, everytime your project is built, Rigid will update the `.swift` without any more input from you
+   - Now, every time your project is built, Rigid will update the `.swift` without any more input from you
