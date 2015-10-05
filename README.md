@@ -1,5 +1,5 @@
 # Rigid
-String-based operations are inherintly unsafe, error-prone and lack basic convenience from code completion and compiler checks. Inspired by the [WWDC 2015 session - Swift In Practice (#411)](https://developer.apple.com/videos/play/wwdc2015-411/), Rigid is a command-line utility that quickly embeds into your Xcode project and provides generated `.swift` code for all your static assets, `.xib` files, segue identifier, view controller identifiers, and more.
+String-based operations are inherintly unsafe, error-prone and lack basic convenience from code completion and compiler checks. Rigid fixes all of that. Inspired by the [WWDC 2015 session - Swift In Practice (#411)](https://developer.apple.com/videos/play/wwdc2015-411/), Rigid is a command-line utility that quickly embeds into your Xcode project and provides generated `.swift` code for all your static assets, `.xib` files, segue identifier, view controller identifiers, and more.
 
 ### How It Works
 Rigid will automatically scan your Xcode project directory looking for images, nibs, storyboards, etc. It will then generate a `.swift` file with typed constants and convenience methods for common operations like instantiating a `UIImage`, `UINib`, `UIViewController`, etc. It is also cross-platform and will seemlessly work on both iOS and Mac OS X without any additional configuration!
