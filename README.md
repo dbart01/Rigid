@@ -1,8 +1,8 @@
 # Rigid
-String-based operations are inherintly unsafe, error-prone and lack basic convenience from code completion and compiler checks. Rigid fixes all of that. Inspired by the [WWDC 2015 session - Swift In Practice (#411)](https://developer.apple.com/videos/play/wwdc2015-411/), Rigid is a command-line utility that quickly embeds into your Xcode project and provides generated `.swift` code for all your static assets, `.xib` files, segue identifier, view controller identifiers, and more.
+String-based operations are inherently unsafe, error-prone and lack basic convenience from code completion and compiler checks. Rigid fixes all of that. Inspired by the [WWDC 2015 session - Swift In Practice (#411)](https://developer.apple.com/videos/play/wwdc2015-411/), Rigid is a command-line utility that quickly embeds into your Xcode project and provides generated `.swift` code for all your static assets, `.xib` files, segue identifier, view controller identifiers, and more.
 
 ### How It Works
-Rigid will automatically scan your Xcode project directory looking for images, nibs, storyboards, etc. It will then generate a `.swift` file with typed constants and convenience methods for common operations like instantiating a `UIImage`, `UINib`, `UIViewController`, etc. It is also cross-platform and will seemlessly work on both iOS and Mac OS X without any additional configuration!
+Rigid will automatically scan your Xcode project directory looking for images, nibs, storyboards, etc. It will then generate a `.swift` file with typed constants and convenience methods for common operations like instantiating a `UIImage`, `UINib`, `UIViewController`, etc. It is also cross-platform and will seamlessly work on both iOS and Mac OS X without any additional configuration!
 
 It replaces using error-prone string literals:
 ```swift
@@ -34,12 +34,12 @@ extension UIImage {
 ```
 ### Why It Matters
 While the example above may seem like a trivial change, we do, in fact, gain several very important advantages from using Rigid's generated code:
-   - the initializer is garanteed to succeed and will therefore return a `UIImage` instead of `UIImage?`
+   - the initializer is guaranteed to succeed and will therefore return a `UIImage` instead of `UIImage?`
    - if the image is removed, renamed or somehow is no longer available, a compile-time error will be emitted instead of silently failing at runtime, *when it matters*
    - code completion!
 
 ### Installation & Using Rigid
-Since Rigid isn't actually a dependency, it will _NOT_ contribute to dependecy "bloat". Adding Rigid is extremely simple and will not impose _ANY_ limitations on your projects as everything is self contained.
+Since Rigid isn't actually a dependency, it will _NOT_ contribute to dependency "bloat". Adding Rigid is extremely simple and will not impose _ANY_ limitations on your projects as everything is self contained.
    - Clone / download this repository
    - Build the project
    - Building the project will automatically copy the Rigid executable to your desktop, locate it, drag it into your project directory (doesn't have to be part of your Xcode project, just need to be in the same directory as your other source files)
