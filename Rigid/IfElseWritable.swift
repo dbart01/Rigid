@@ -38,13 +38,15 @@ struct IfElseWritable: Writable {
     var indent: Int = 0
     let condition: String
     let pair: IfElsePair
+    let useLineBreaks: Bool
     
     // ----------------------------------
     //  MARK: - Init -
     //
-    init(condition: String, pair: IfElsePair) {
-        self.condition = condition
-        self.pair      = pair
+    init(condition: String, pair: IfElsePair, useLineBreaks: Bool = false) {
+        self.condition     = condition
+        self.pair          = pair
+        self.useLineBreaks = useLineBreaks
     }
     
     // ----------------------------------
@@ -54,8 +56,16 @@ struct IfElseWritable: Writable {
         
         var content = "\n"
         content    += "#if \(self.condition)"
+        if self.useLineBreaks {
+            content += "\n"
+        }
+        
         content    += pair.ifBlock.content()
         content    += "#else"
+        if self.useLineBreaks {
+            content += "\n"
+        }
+        
         content    += pair.elseBlock.content()
         content    += "#endif\n"
         

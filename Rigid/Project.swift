@@ -170,6 +170,7 @@ struct Project {
         
         self.generateCommentHeaderWritables(&writables)
         
+        self.generateImportWritables(&writables)
         self.generateImageWritables(&writables)
         self.generateViewControllerWritables(&writables)
         self.generateCellWritables(&writables)
@@ -183,6 +184,10 @@ struct Project {
     // ----------------------------------
     //  MARK: - Generating Writables -
     //
+    private func generateImportWritables(inout writables: [Writable]) {
+        writables += Generator.generateImports()
+    }
+    
     private func generateCommentHeaderWritables(inout writables: [Writable]) {
         var header = CommentHeaderWritable()
         header.appendLineComment("")

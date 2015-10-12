@@ -41,8 +41,18 @@ struct Generator {
     // ----------------------------------
     //  MARK: - Wrapping If Else -
     //
-    private static func wrapCrossplatform(tuple: (Writable, Writable)) -> IfElseWritable {
-        return IfElseWritable(condition: "os(iOS)", pair: (ifBlock: tuple.0, elseBlock: tuple.1))
+    private static func wrapCrossplatform(tuple: (Writable, Writable), useLineBreaks: Bool = false) -> IfElseWritable {
+        return IfElseWritable(condition: "os(iOS)", pair: (ifBlock: tuple.0, elseBlock: tuple.1), useLineBreaks: useLineBreaks)
+    }
+    
+    // ----------------------------------
+    //  MARK: - Generat Imports -
+    //
+    static func generateImports() -> IfElseWritable {
+        let conditionTrue  = Line(indent: 0, string: "import UIKit")
+        let conditionFalse = Line(indent: 0, string: "import AppKit")
+        
+        return self.wrapCrossplatform((conditionTrue, conditionFalse), useLineBreaks: true)
     }
     
     // ------------------------------------
@@ -121,7 +131,8 @@ struct Generator {
             controller.returnType = "T"
             controller.body       = Body(indent: 0, body: "return self.\(methodName)(viewController.rawValue) as! T")
             controller.arguments  = [
-                Argument(name: "viewController", type: "ViewController")
+                Argument(name: "viewController", type: "ViewController"),
+                Argument(name: "type",           type: "T.Type"),
             ]
             
             return [initializer, controller]
