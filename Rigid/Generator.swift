@@ -42,7 +42,7 @@ struct Generator {
     //  MARK: - Wrapping If Else -
     //
     private static func wrapCrossplatform(tuple: (Writable, Writable), useLineBreaks: Bool = false) -> IfElseWritable {
-        return IfElseWritable(condition: "os(iOS)", pair: (ifBlock: tuple.0, elseBlock: tuple.1), useLineBreaks: useLineBreaks)
+        return IfElseWritable(condition: "os(iOS) || os(tvOS)", pair: (ifBlock: tuple.0, elseBlock: tuple.1), useLineBreaks: useLineBreaks)
     }
     
     // ----------------------------------

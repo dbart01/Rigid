@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A25F1611BBEDEA500965226 /* ExtensionWritable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A25F1601BBEDEA500965226 /* ExtensionWritable.swift */; settings = {ASSET_TAGS = (); }; };
-		9A25F1631BBEDEDE00965226 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A25F1621BBEDEDE00965226 /* Method.swift */; settings = {ASSET_TAGS = (); }; };
-		9A25F1651BBEE7E200965226 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A25F1641BBEE7E200965226 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
+		9A25F1611BBEDEA500965226 /* ExtensionWritable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A25F1601BBEDEA500965226 /* ExtensionWritable.swift */; };
+		9A25F1631BBEDEDE00965226 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A25F1621BBEDEDE00965226 /* Method.swift */; };
+		9A25F1651BBEE7E200965226 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A25F1641BBEE7E200965226 /* Constants.swift */; };
 		9A72E1AD1BBC312F00533FBB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A72E1AC1BBC312F00533FBB /* main.swift */; };
-		9A72E1B71BBC350800533FBB /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A72E1B61BBC350800533FBB /* Project.swift */; settings = {ASSET_TAGS = (); }; };
-		9A72E1B91BBC46A300533FBB /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A72E1B81BBC46A300533FBB /* Object.swift */; settings = {ASSET_TAGS = (); }; };
-		9A72E1C31BBCD6AD00533FBB /* Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A72E1C21BBCD6AD00533FBB /* Writer.swift */; settings = {ASSET_TAGS = (); }; };
-		9A79119B1BC023280049DF30 /* Argument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A79119A1BC023280049DF30 /* Argument.swift */; settings = {ASSET_TAGS = (); }; };
-		9A7911A31BC025A50049DF30 /* XMLFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7911A21BC025A50049DF30 /* XMLFile.swift */; settings = {ASSET_TAGS = (); }; };
-		9A7911A81BC196850049DF30 /* XMLSearchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7911A71BC196850049DF30 /* XMLSearchable.swift */; settings = {ASSET_TAGS = (); }; };
-		9A7911AA1BC19DB90049DF30 /* XMLIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7911A91BC19DB90049DF30 /* XMLIdentifiable.swift */; settings = {ASSET_TAGS = (); }; };
-		9A7911AC1BC1B7BB0049DF30 /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7911AB1BC1B7BB0049DF30 /* Body.swift */; settings = {ASSET_TAGS = (); }; };
-		9A7911AE1BC1BC9E0049DF30 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7911AD1BC1BC9E0049DF30 /* Line.swift */; settings = {ASSET_TAGS = (); }; };
-		9A7911B01BC1FD110049DF30 /* IfElseWritable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7911AF1BC1FD110049DF30 /* IfElseWritable.swift */; settings = {ASSET_TAGS = (); }; };
-		9A7911B31BC227AF0049DF30 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7911B21BC227AF0049DF30 /* Generator.swift */; settings = {ASSET_TAGS = (); }; };
+		9A72E1B71BBC350800533FBB /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A72E1B61BBC350800533FBB /* Project.swift */; };
+		9A72E1B91BBC46A300533FBB /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A72E1B81BBC46A300533FBB /* Object.swift */; };
+		9A72E1C31BBCD6AD00533FBB /* Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A72E1C21BBCD6AD00533FBB /* Writer.swift */; };
+		9A79119B1BC023280049DF30 /* Argument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A79119A1BC023280049DF30 /* Argument.swift */; };
+		9A7911A31BC025A50049DF30 /* XMLFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7911A21BC025A50049DF30 /* XMLFile.swift */; };
+		9A7911A81BC196850049DF30 /* XMLSearchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7911A71BC196850049DF30 /* XMLSearchable.swift */; };
+		9A7911AA1BC19DB90049DF30 /* XMLIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7911A91BC19DB90049DF30 /* XMLIdentifiable.swift */; };
+		9A7911AC1BC1B7BB0049DF30 /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7911AB1BC1B7BB0049DF30 /* Body.swift */; };
+		9A7911AE1BC1BC9E0049DF30 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7911AD1BC1BC9E0049DF30 /* Line.swift */; };
+		9A7911B01BC1FD110049DF30 /* IfElseWritable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7911AF1BC1FD110049DF30 /* IfElseWritable.swift */; };
+		9A7911B31BC227AF0049DF30 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7911B21BC227AF0049DF30 /* Generator.swift */; };
 		9A7911CA1BC2CD710049DF30 /* Rigid in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A72E1A91BBC312F00533FBB /* Rigid */; };
-		9A7911CC1BC2E6EE0049DF30 /* CommentHeaderWritable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7911CB1BC2E6EE0049DF30 /* CommentHeaderWritable.swift */; settings = {ASSET_TAGS = (); }; };
-		9A7E2DEE1BBDD701006D5E86 /* Writable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E2DED1BBDD701006D5E86 /* Writable.swift */; settings = {ASSET_TAGS = (); }; };
-		9A7E2DF31BBDD9F1006D5E86 /* EnumWritable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E2DF21BBDD9F1006D5E86 /* EnumWritable.swift */; settings = {ASSET_TAGS = (); }; };
+		9A7911CC1BC2E6EE0049DF30 /* CommentHeaderWritable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7911CB1BC2E6EE0049DF30 /* CommentHeaderWritable.swift */; };
+		9A7E2DEE1BBDD701006D5E86 /* Writable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E2DED1BBDD701006D5E86 /* Writable.swift */; };
+		9A7E2DF31BBDD9F1006D5E86 /* EnumWritable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E2DF21BBDD9F1006D5E86 /* EnumWritable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -191,6 +191,7 @@
 		9A72E1A11BBC312F00533FBB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Dima Bart";
 				TargetAttributes = {
