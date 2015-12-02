@@ -328,7 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				GCC_UNROLL_LOOPS = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -340,7 +340,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				GCC_UNROLL_LOOPS = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
