@@ -202,14 +202,14 @@ struct Generator {
     // ----------------------------------
     //  MARK: - Generate Nibs -
     //
-    static func generateNibExntensions() -> IfElseWritable {
+    static func generateNibExtensions() -> IfElseWritable {
         return self.wrapCrossplatform((
-            self.generateNibExntension(.iOS),
-            self.generateNibExntension(.OSX)
+            self.generateNibExtension(.iOS),
+            self.generateNibExtension(.OSX)
         ))
     }
     
-    private static func generateNibExntension(platform: Platform) -> ExtensionWritable {
+    private static func generateNibExtension(platform: Platform) -> ExtensionWritable {
         
         var className  = ""
         var methodBody = ""
