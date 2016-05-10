@@ -192,7 +192,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Dima Bart";
 				TargetAttributes = {
 					9A72E1A81BBC312F00533FBB = {
@@ -327,7 +327,6 @@
 		9A72E1B11BBC312F00533FBB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				ENABLE_BITCODE = NO;
 				GCC_UNROLL_LOOPS = NO;
 				ONLY_ACTIVE_ARCH = YES;
@@ -339,7 +338,6 @@
 		9A72E1B21BBC312F00533FBB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				ENABLE_BITCODE = NO;
 				GCC_UNROLL_LOOPS = NO;
 				ONLY_ACTIVE_ARCH = YES;
