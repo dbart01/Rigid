@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A1929701CE2A7EE006DD989 /* AggregatorWritable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A19296F1CE2A7EE006DD989 /* AggregatorWritable.swift */; };
 		9A25F1611BBEDEA500965226 /* ExtensionWritable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A25F1601BBEDEA500965226 /* ExtensionWritable.swift */; };
 		9A25F1631BBEDEDE00965226 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A25F1621BBEDEDE00965226 /* Method.swift */; };
 		9A25F1651BBEE7E200965226 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A25F1641BBEE7E200965226 /* Constants.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9A19296F1CE2A7EE006DD989 /* AggregatorWritable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggregatorWritable.swift; sourceTree = "<group>"; };
 		9A25F1601BBEDEA500965226 /* ExtensionWritable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionWritable.swift; sourceTree = "<group>"; };
 		9A25F1621BBEDEDE00965226 /* Method.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
 		9A25F1641BBEE7E200965226 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				9A79119A1BC023280049DF30 /* Argument.swift */,
 				9A7E2DF21BBDD9F1006D5E86 /* EnumWritable.swift */,
 				9A25F1601BBEDEA500965226 /* ExtensionWritable.swift */,
+				9A19296F1CE2A7EE006DD989 /* AggregatorWritable.swift */,
 				9A7911AF1BC1FD110049DF30 /* IfElseWritable.swift */,
 				9A7911CB1BC2E6EE0049DF30 /* CommentHeaderWritable.swift */,
 			);
@@ -225,6 +228,7 @@
 				9A25F1651BBEE7E200965226 /* Constants.swift in Sources */,
 				9A7911AE1BC1BC9E0049DF30 /* Line.swift in Sources */,
 				9A7E2DF31BBDD9F1006D5E86 /* EnumWritable.swift in Sources */,
+				9A1929701CE2A7EE006DD989 /* AggregatorWritable.swift in Sources */,
 				9A7911CC1BC2E6EE0049DF30 /* CommentHeaderWritable.swift in Sources */,
 				9A7911B01BC1FD110049DF30 /* IfElseWritable.swift in Sources */,
 				9A7911A81BC196850049DF30 /* XMLSearchable.swift in Sources */,

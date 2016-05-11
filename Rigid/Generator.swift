@@ -48,7 +48,7 @@ struct Generator {
     // ----------------------------------
     //  MARK: - Generat Imports -
     //
-    static func generateImports() -> IfElseWritable {
+    static func generateImports() -> Writable {
         let conditionTrue  = Line(indent: 0, string: "import UIKit")
         let conditionFalse = Line(indent: 0, string: "import AppKit")
         
@@ -58,7 +58,7 @@ struct Generator {
     // ------------------------------------
     //  MARK: - Generate Images -
     //
-    static func generateImageExtensions() -> IfElseWritable {
+    static func generateImageExtensions() -> Writable {
         return self.wrapCrossplatform((
             self.generateImageExtension(.iOS),
             self.generateImageExtension(.OSX)
@@ -94,7 +94,7 @@ struct Generator {
     // ------------------------------------
     //  MARK: - Generate View Controller -
     //
-    static func generateViewControllerExtensions() -> IfElseWritable {
+    static func generateViewControllerExtensions() -> Writable {
         return self.wrapCrossplatform((
             self.generateViewControllerExtension(.iOS),
             self.generateViewControllerExtension(.OSX)
@@ -142,7 +142,7 @@ struct Generator {
     // ----------------------------------
     //  MARK: - Generate Segue -
     //
-    static func generateStoryboardSegueExtensions() -> IfElseWritable {
+    static func generateStoryboardSegueExtensions() -> Writable {
         return self.wrapCrossplatform((
             self.generateStoryboardSegueExtension(.iOS),
             self.generateStoryboardSegueExtension(.OSX)
@@ -202,10 +202,16 @@ struct Generator {
     // ----------------------------------
     //  MARK: - Generate Nibs -
     //
-    static func generateNibExtensions() -> IfElseWritable {
+    static func generateNibExtensions() -> Writable {
         return self.wrapCrossplatform((
-            self.generateNibExtension(.iOS),
-            self.generateNibExtension(.OSX)
+            AggregatorWritable(writables: [
+                self.generateNibExtension(.iOS),
+                self.generateTableViewExtension(.iOS),
+                self.generateCollectionViewExtension(.iOS),
+            ]),
+            AggregatorWritable(writables: [
+                self.generateNibExtension(.OSX),
+            ])
         ))
     }
     
@@ -238,5 +244,71 @@ struct Generator {
             return [method]
         }
     }
+    
+    private static func generateTableViewExtension(platform: Platform) -> ExtensionWritable {
+        
+        var className  = ""
+        var methodBody = ""
+        
+        switch platform {
+        case .iOS:
+            className  = "UITableView"
+            methodBody = "return self.dequeueReusableCellWithIdentifier(nib.rawValue, forIndexPath: indexPath) as! T"
+            break
+            
+        case .OSX:
+            className  = "NSTableView"
+            methodBody = ""
+            break
+        }
+        
+        return ExtensionWritable(name: className) { () -> [Method] in
+            
+            var method        = Method(type: .Instance, name: "dequeueReusableCellWithNib<T>")
+            method.returnType = "T"
+            method.body       = Body(indent: 0, body: methodBody)
+            method.arguments  = [
+                Argument(name: "nib", type: "Nib"),
+                Argument(label: "forIndexPath", name: "indexPath", type: "NSIndexPath"),
+            ]
+            
+            return [method]
+        }
+    }
+    
+    private static func generateCollectionViewExtension(platform: Platform) -> ExtensionWritable {
+        
+        var className  = ""
+        var methodBody = ""
+        
+        switch platform {
+        case .iOS:
+            className  = "UICollectionView"
+            methodBody = "return self.dequeueReusableCellWithReuseIdentifier(nib.rawValue, forIndexPath: indexPath) as! T"
+            break
+            
+        case .OSX:
+            className  = "NSCollectionView"
+            methodBody = ""
+            break
+        }
+        
+        return ExtensionWritable(name: className) { () -> [Method] in
+            
+            var method        = Method(type: .Instance, name: "dequeueReusableCellWithNib<T>")
+            method.returnType = "T"
+            method.body       = Body(indent: 0, body: methodBody)
+            method.arguments  = [
+                Argument(name: "nib", type: "Nib"),
+                Argument(label: "forIndexPath", name: "indexPath", type: "NSIndexPath"),
+            ]
+            
+            return [method]
+        }
+    }
+    
+    // ----------------------------------
+    //  MARK: - Generate TableView -
+    //
 }
 
