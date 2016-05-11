@@ -246,7 +246,7 @@ struct Project {
     private func generateNibWritables(inout writables: [Writable]) {
         if !self.nibs.isEmpty {
             writables += EnumWritable(objects: self.nibs,   name: "Nib")
-            writables += Generator.generateNibExntensions()
+            writables += Generator.generateNibExtensions()
         }
     }
 }
