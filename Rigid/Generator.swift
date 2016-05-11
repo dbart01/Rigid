@@ -132,7 +132,6 @@ struct Generator {
             controller.body       = Body(indent: 0, body: "return self.\(methodName)(viewController.rawValue) as! T")
             controller.arguments  = [
                 Argument(name: "viewController", type: "ViewController"),
-                Argument(name: "type",           type: "T.Type"),
             ]
             
             return [initializer, controller]
